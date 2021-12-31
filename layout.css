@@ -1,0 +1,31 @@
+/*#palette_grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 3%;
+    grid-template-rows: auto;
+    grid-template-areas: "color1 color2 color3";
+}*/
+
+#palette_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+#palette_grid > * {
+    flex-grow: 1;
+    margin: 6px;
+}
+
+#buttons_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+#buttons_grid > * {
+    flex-grow: 1;
+    margin: 6px;
+}

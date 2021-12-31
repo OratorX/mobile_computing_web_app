@@ -5,7 +5,7 @@
     <title>Palette Generator</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="grids.css">
+    <link rel="stylesheet" href="layout.css">
 </head>
 <body>
 <header>
@@ -13,14 +13,20 @@
 </header>
 <main>
     <div id="palette_grid">
-        <div id="color_1"><p>Color 1</p></div>
-        <div id="color_2"><p>Color 2</p></div>
-        <div id="color_3"><p>Color 3</p></div>
+        <div id="color_1" class="palette-element">
+            <span>Color 1</span>
+        </div>
+        <div id="color_2" class="palette-element">
+            <span>Color 2</span>
+        </div>
+        <div id="color_3" class="palette-element">
+            <span>Color 3</span>
+        </div>
     </div>
     <div id="buttons_bar">
         <div id="buttons_grid">
-            <div id="roll_random_button"><p>Button 1</p></div>
-            <div id="hold_and_shake_button"><p>Button 1</p></div>
+            <div id="roll_random_button" class="button-element"><p>Button 1</p></div>
+            <div id="hold_and_shake_button" class="button-element"><p>Button 1</p></div>
         </div>
     </div>
 </main>

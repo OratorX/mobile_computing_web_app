@@ -1,0 +1,25 @@
+header {
+    text-align: center;
+}
+
+.palette-element, .button-element {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+.palette-element {
+    min-height: 5rem;
+    border: 2px dashed #f69c55;
+
+}
+
+.palette-element span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.button-element {
+    border: 2px dashed #f69c55;
+}
