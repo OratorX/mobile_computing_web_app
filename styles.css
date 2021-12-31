@@ -23,3 +23,11 @@ header {
 .button-element {
     border: 2px dashed #f69c55;
 }
+
+main {
+    flex: 1;
+}
+
+footer {
+    text-align: left;
+}
