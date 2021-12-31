@@ -10,6 +10,7 @@ header {
 
 .palette-element {
     min-height: 5rem;
+    min-width: 15rem;
     border: 2px dashed #f69c55;
 
 }
@@ -24,10 +25,9 @@ header {
     border: 2px dashed #f69c55;
 }
 
-main {
-    flex: 1;
-}
 
 footer {
     text-align: left;
 }
+
+

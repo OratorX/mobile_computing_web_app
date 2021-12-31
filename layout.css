@@ -1,3 +1,4 @@
+/*Document structure*/
 html, body {
     height: 100%;
     width: 100%;
@@ -22,10 +23,13 @@ footer {
     margin-left: 6px;
 }
 
+
+/*Palette and buttons layout*/
+
 #palette_grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    flex-flow: row wrap;
     align-items: flex-start;
 }
 
@@ -37,11 +41,19 @@ footer {
 #buttons_grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    flex-flow: row wrap;
 }
 
 #buttons_grid > * {
     flex-grow: 1;
     margin: 6px;
+}
+
+
+/*Media Queries*/
+@media (max-width: 50rem) {
+    #palette_grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
