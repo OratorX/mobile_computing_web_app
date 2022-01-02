@@ -22,8 +22,21 @@ header {
 
 .button-element {
     border: 2px solid black;
+    box-sizing: border-box;
+    display: block;
+    min-height: 40px;
+    min-width: 120px;
 }
 
+
+.center {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
 footer {
     text-align: left;
