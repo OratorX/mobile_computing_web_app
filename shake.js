@@ -130,7 +130,7 @@
 
 
 const shakeEvent = new Shake({
-    threshold: 2, // 1 - too low
+    threshold: 1.4, // 1 - too low, 2 - too high
     timeout: 2000 // optional, determines the frequency of event generation
 });
 
