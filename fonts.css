@@ -24,4 +24,8 @@ button {
     button {
         font-size: xxx-large;
     }
+
+    footer > p {
+        font-size: medium;
+    }
 }
