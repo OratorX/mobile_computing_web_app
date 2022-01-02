@@ -12,6 +12,9 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: center;
+
     height: 75px;
 }
 
@@ -20,6 +23,8 @@ main {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
     margin-left: 6px;
 }
 
