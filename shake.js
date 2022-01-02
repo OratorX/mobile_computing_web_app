@@ -130,7 +130,7 @@
 
 
 const shakeEvent = new Shake({
-    threshold: 10, // optional shake strength threshold
+    threshold: 1, // optional shake strength threshold
     timeout: 1000 // optional, determines the frequency of event generation
 });
 
