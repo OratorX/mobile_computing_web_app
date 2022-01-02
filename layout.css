@@ -53,6 +53,11 @@ footer {
     margin: 6px;
 }
 
+#shaking_hint {
+    margin-top: 100px;
+    text-align: center;
+    color: gray;
+}
 
 /*Media Queries*/
 @media (max-width: 800px) {

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="layout.css">
     <script type="text/javascript" src="pallete.js"></script>
+    <script defer type="text/javascript" src="shaking.js"></script>
+
 
 </head>
 <body>
@@ -27,13 +29,17 @@
     </div>
     <div id="buttons_bar">
         <div id="buttons_grid">
-            <div>
-                <button id=roll_random_button" type="button" onclick="rollColors()" class="button-element center">Roll
+            <div id="roll">
+                <button id=roll_random_button" type="button" onclick="rollColors()" class="button-element center">
+                    Roll
                 </button>
             </div>
             <div>
                 <button id="lock_button" type="button" onclick="swapLock()" class="button-element center">Lock</button>
             </div>
+        </div>
+        <div id="shaking_hint" class="center">
+            <span>Shake your device to roll!</span>
         </div>
     </div>
 </main>

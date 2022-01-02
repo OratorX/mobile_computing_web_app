@@ -24,8 +24,8 @@ header {
     border: 2px solid black;
     box-sizing: border-box;
     display: block;
-    min-height: 40px;
-    min-width: 120px;
+    min-height: 60px;
+    min-width: 320px;
 }
 
 
