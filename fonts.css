@@ -11,10 +11,10 @@ button {
 }
 
 
-@media screen and (max-width: 800px), screen and (orientation: portrait) {
-    /*Small Screen or Phone*/
+@media screen and (orientation: portrait) {
+    /*Phone*/
     h1 {
-        font-size: x-large;
+        font-size: xxx-large;
     }
 
     p, span {
