@@ -59,8 +59,8 @@ footer {
 }
 
 /*Media Queries*/
-@media (max-width: 800px) {
-    /*Small Screen*/
+@media screen and (max-width: 800px), screen and (orientation: portrait) {
+    /*Small Screen or Phone*/
     #palette_grid {
         flex-direction: column;
         align-items: stretch;
