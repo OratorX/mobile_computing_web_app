@@ -24,8 +24,8 @@ main {
 
 footer {
     display: flex;
-    justify-content: center;
     margin-left: 6px;
+    margin-top: auto;
 }
 
 /*Palette and buttons layout*/
@@ -47,8 +47,6 @@ footer {
 
 #buttons_grid {
     display: flex;
-    flex-wrap: wrap;
-    flex-flow: row wrap;
     margin-top: 24px;
 }
 
@@ -58,8 +56,10 @@ footer {
 }
 
 #shaking_hint {
+    display: flex;
     margin-top: 100px;
     text-align: center;
+    justify-content: center;
     color: gray;
 }
 
