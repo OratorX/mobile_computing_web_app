@@ -128,15 +128,40 @@
     return Shake;
 }));
 
-const shakeEvent = new Shake({
-    threshold: 15, // optional shake strength threshold
-    timeout: 2000 // optional, determines the frequency of event generation
+
+function makeHintVisible() {
+    document.getElementById("shaking_hint").style.display = "block";
+}
+
+function makeHintInvisible() {
+    document.getElementById("shaking_hint").style.display = "none";
+}
+
+var gyroPresent = false;
+window.addEventListener("devicemotion", function (event) {
+    if (event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma)
+        gyroPresent = true;
 });
-shakeEvent.start();
-window.addEventListener('shake', shakeEventDidOccur, false);
+
+if (gyroPresent) {
+    makeHintVisible();
+    enableShakeRoll();
+} else {
+    makeHintInvisible();
+}
+
+function enableShakeRoll() {
+    const shakeEvent = new Shake({
+        threshold: 10, // optional shake strength threshold
+        timeout: 1000 // optional, determines the frequency of event generation
+    });
+
+    shakeEvent.start();
+    window.addEventListener('shake', shakeEventDidOccur, false);
 
 //function to call when shake occurs
-function shakeEventDidOccur() {
-    rollColors();
+    function shakeEventDidOccur() {
+        rollColors();
+    }
 }
 
