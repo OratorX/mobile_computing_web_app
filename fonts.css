@@ -1,3 +1,11 @@
-p, h1, span {
+p, h1, span, button {
     font-family: "Lucida Console", monospace;
+}
+
+p, span {
+    font-size: large;
+}
+
+button {
+    font-size: medium;
 }

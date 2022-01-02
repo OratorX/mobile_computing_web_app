@@ -1,3 +1,4 @@
+/*Document structure*/
 html, body {
     height: 100%;
     width: 100%;
@@ -22,11 +23,17 @@ footer {
     margin-left: 6px;
 }
 
+
+/*Palette and buttons layout*/
+
 #palette_grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    flex-flow: row wrap;
     align-items: flex-start;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
 }
 
 #palette_grid > * {
@@ -37,11 +44,44 @@ footer {
 #buttons_grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    flex-flow: row wrap;
+    margin-top: 24px;
 }
 
 #buttons_grid > * {
     flex-grow: 1;
     margin: 6px;
+}
+
+#shaking_hint {
+    margin-top: 100px;
+    text-align: center;
+    color: gray;
+}
+
+/*Media Queries*/
+@media (max-width: 800px) {
+    /*Small Screen*/
+    #palette_grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    /*Large Screen*/
+    .palette-element {
+        min-height: 160px;
+        min-width: 180px;
+        border: 2px solid black;
+    }
+
+    #palette_grid, #buttons_grid, header, footer {
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+
+    #buttons_grid {
+        margin-top: 100px;
+    }
 }

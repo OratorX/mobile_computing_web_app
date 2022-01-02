@@ -9,9 +9,9 @@ header {
 }
 
 .palette-element {
-    min-height: 5rem;
-    border: 2px dashed #f69c55;
-
+    min-height: 160px;
+    min-width: 240px;
+    border: 2px solid black;
 }
 
 .palette-element span {
@@ -21,13 +21,25 @@ header {
 }
 
 .button-element {
-    border: 2px dashed #f69c55;
+    border: 2px solid black;
+    box-sizing: border-box;
+    display: block;
+    min-height: 60px;
+    min-width: 320px;
 }
 
-main {
-    flex: 1;
+
+.center {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 footer {
     text-align: left;
 }
+
+
