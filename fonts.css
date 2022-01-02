@@ -9,3 +9,15 @@ p, span {
 button {
     font-size: medium;
 }
+
+
+@media screen and (max-width: 800px), screen and (orientation: portrait) {
+    /*Small Screen or Phone*/
+    p, span {
+        font-size: xx-large;
+    }
+
+    button {
+        font-size: x-large;
+    }
+}
