@@ -14,12 +14,12 @@ body {
 header {
     display: flex;
     justify-content: center;
-
-    height: 75px;
+    margin-top: 10px;
 }
 
 main {
-    flex: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
