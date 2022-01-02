@@ -9,10 +9,9 @@ header {
 }
 
 .palette-element {
-    min-height: 5rem;
-    min-width: 15rem;
-    border: 2px dashed #f69c55;
-
+    min-height: 160px;
+    min-width: 240px;
+    border: 2px solid black;
 }
 
 .palette-element span {
@@ -22,7 +21,7 @@ header {
 }
 
 .button-element {
-    border: 2px dashed #f69c55;
+    border: 2px solid black;
 }
 
 
