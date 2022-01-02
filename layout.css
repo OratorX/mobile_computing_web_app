@@ -71,6 +71,15 @@ footer {
         align-items: stretch;
         min-height: 60%;
     }
+
+    #buttons_grid {
+        min-height: 20%;
+    }
+
+    header {
+        min-height: 10%;
+    }
+
 }
 
 @media screen and (min-width: 1280px) and (orientation: landscape) {
