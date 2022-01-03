@@ -8,20 +8,20 @@ function rollColors() {
 function addColorFirst(color) {
     changeBackgroundColorById("color_1", color);
     setTextById("color_1", color);
-    changeTextColorById("color_1", invertColor(color));
+    changeTextColorById("color_1", contrastingColor(color.substring(1)));
 
 }
 
 function addColorSecond(color) {
     changeBackgroundColorById("color_2", color);
     setTextById("color_2", color);
-    changeTextColorById("color_2", invertColor(color));
+    changeTextColorById("color_2", contrastingColor(color.substring(1)));
 }
 
 function addColorThird(color) {
     changeBackgroundColorById("color_3", color);
     setTextById("color_3", color);
-    changeTextColorById("color_3", invertColor(color));
+    changeTextColorById("color_3", contrastingColor(color.substring(1)));
 }
 
 function changeTextColorById(id, color) {
@@ -40,7 +40,6 @@ function changeBackgroundColorById(id, color) {
 
 }
 
-
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -50,27 +49,23 @@ function getRandomColor() {
     return color;
 }
 
-function invertColor(hex) {
-    if (hex.indexOf('#') === 0) {
-        hex = hex.slice(1);
-    }
-    // convert 3-digit hex to 6-digits.
-    if (hex.length === 3) {
-        hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
-    }
-    if (hex.length !== 6) {
-        throw new Error('Invalid HEX color.');
-    }
-    // invert color components
-    var r = (255 - parseInt(hex.slice(0, 2), 16)).toString(16),
-        g = (255 - parseInt(hex.slice(2, 4), 16)).toString(16),
-        b = (255 - parseInt(hex.slice(4, 6), 16)).toString(16);
-    // pad each with zeros and return
-    return '#' + padZero(r) + padZero(g) + padZero(b);
+function contrastingColor(color) {
+    return (luma(color) >= 165) ? '#000' : '#fff';
 }
 
-function padZero(str, len) {
-    len = len || 2;
-    var zeros = new Array(len).join('0');
-    return (zeros + str).slice(-len);
+function luma(color) // color can be a hx string or an array of RGB values 0-255
+{
+    var rgb = (typeof color === 'string') ? hexToRGBArray(color) : color;
+    return (0.2126 * rgb[0]) + (0.7152 * rgb[1]) + (0.0722 * rgb[2]); // SMPTE C, Rec. 709 weightings
+}
+
+function hexToRGBArray(color) {
+    if (color.length === 3)
+        color = color.charAt(0) + color.charAt(0) + color.charAt(1) + color.charAt(1) + color.charAt(2) + color.charAt(2);
+    else if (color.length !== 6)
+        throw('Invalid hex color: ' + color);
+    var rgb = [];
+    for (var i = 0; i <= 2; i++)
+        rgb[i] = parseInt(color.substr(i * 2, 2), 16);
+    return rgb;
 }
